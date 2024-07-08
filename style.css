@@ -1,0 +1,208 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: #00FF00; /* Neon green color */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ensure no default margins */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.matrix-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('bg.gif') center/cover no-repeat; /* Replace 'bg.gif' with your actual image path */
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.music-player {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    z-index: 1; /* Ensure music player content is above the background */
+}
+
+h1 {
+    font-size: 2.9em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #00FF00; /* Neon glow */
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 20px;
+    text-shadow: 0 0 3px #00FF00; /* Neon glow */
+}
+
+.playlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid layout */
+    gap: 20px; /* Adjust spacing between songs */
+    padding: 20px;
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Set a maximum width */
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+    background-color: black;
+    animation: rainbowText 2s linear infinite;
+}
+
+@keyframes rainbowText {
+    0% {
+        color: red;
+    }
+    20% {
+        color: orange;
+    }
+    40% {
+        color: yellow;
+    }
+    60% {
+        color: green;
+    }
+    80% {
+        color: blue;
+    }
+    100% {
+        color: violet;
+    }
+}
+
+.song-title {
+    margin-top: 10px; /* Space between image and title */
+    font-size: 1em;
+    color: #00FF00;
+}
+
+.movie-name {
+    margin-top: 0.1px;
+    font-size: 0.8em;
+    color: #00FF00;
+}
+
+.song-img {
+    width: 100%; /* Ensure the image takes full width of its container */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    max-width: 100%; /* Set maximum width as needed */
+    max-height: 200px; /* Set maximum height as needed */
+    border-radius: 10px;
+    object-fit: cover; /* Cover ensures the image covers the entire box without distortion */
+}
+
+.song-img-small {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 5px;
+    object-fit: cover; /* Ensure image covers without distortion */
+    margin-right: 10px; /* Add margin for spacing */
+}
+
+.play-button {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    outline: none; /* Remove outline on focus */
+}
+
+.play-button img {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover img {
+    transform: scale(1.1);
+}
+
+/* Fixed music player bar */
+.music-player-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: #00FF00; /* Neon green color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for separation */
+    z-index: 999; /* Ensure it stays above other content */
+    border-top: 2px solid #00FF00; /* Green line to distinguish from playlist */
+}
+
+.music-player-bar .current-song {
+    display: flex;
+    align-items: center;
+}
+
+.music-player-bar .song-info {
+    margin-right: 10px;
+}
+
+.music-player-bar .controls {
+    display: flex;
+    align-items: center;
+}
+
+.music-player-bar button {
+    margin-left: 10px;
+    background-color: black;
+    color: #00FF00; /* Neon green color */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.music-player-bar button:hover {
+    background-color: darkgreen; /* Neon green color */
+    color: black;
+}
+
+/* Progress bar */
+.progress-container {
+    flex-grow: 1;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative; /* Ensure the container is relative for the bar */
+    cursor: pointer; /* Change cursor to pointer for interaction */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00FF00; /* Neon green color */
+    width: 0%;
+    transition: width 0.1s;
+}

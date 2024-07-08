@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Playlist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favi.png" type="image/png"> <!-- Add favicon -->
+</head>
+<body>
+    <div class="matrix-background"></div>
+    <div class="music-player">
+        <h1>Heart Hacking Playlist</h1>
+        <h2>Songs that can exploit my heart...</h2>
+        <div class="playlist">
+                                                      <!----song1 tum hi ho----->
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+                                                      <!-----song2 phir bhi tumko chahunga----->
+            <div class="song">
+                <img src="img/hgf.jpg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Phir bhi tumko Chahunga</p>
+                <p class="movie-name">Half Girlfriend</p>
+                <audio src="audio/pbtc.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+                                                       <!-----song3 chahun mein ya na----->
+            <div class="song">
+                <img src="img/ak.jpg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Chahun mein ya na</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/cmna.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            
+            <div class="song">
+                <img src="img/Untitled.jpeg" alt="Song 1 Image" class="song-img">
+                <p class="song-title">Tumhi ho</p>
+                <p class="movie-name">Aashiqui2</p>
+                <audio src="audio/tumhiho.mp3"></audio>
+                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
+            </div>
+            <!-- Add more songs as needed -->
+        </div>
+    </div>
+
+    <div class="music-player-bar">
+        <img src="" alt="Song Image" class="song-img-small">
+        <div class="song-info">
+            <p class="song-title">-</p>
+            <p class="movie-name">-</p>
+        </div>
+        <div class="progress-container" onclick="seek(event)">
+            <div class="progress-bar"></div>
+        </div>
+        <div class="time-display">
+            <span class="current-time">0:00</span> / <span class="total-time">0:00</span>
+        </div>
+        <div class="controls">
+            <button class="control-button loop-button" onclick="toggleLoop()"><img src="img/arrow.png" height="25" width="25"></img></button>
+            <button class="control-button" onclick="playPrevious()"><img src="img/previous.png" height="25" width="25"></button>
+            <button class="control-button play" onclick="play()"><img src="img/play1.png" height="25" width="25"></button>
+            <button class="control-button pause" onclick="pause()"><img src="img/pause1.png" height="25" width="25"></button>
+            <button class="control-button" onclick="playNext()"><img src="img/next.png" height="25" width="25"></button>
+            <button class="control-button" onclick="playRandom()"><img src="img/shuffle.png" height="25" width="25"></button>
+            <button class="control-button" onclick="playAll()"><img src="img/all.png" height="25" width="25"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

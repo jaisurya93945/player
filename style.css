@@ -153,7 +153,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 2px;
     box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for separation */
     z-index: 999; /* Ensure it stays above other content */
     border-top: 2px solid #00FF00; /* Green line to distinguish from playlist */
@@ -205,4 +205,92 @@ h2 {
     background-color: #00FF00; /* Neon green color */
     width: 0%;
     transition: width 0.1s;
+}
+
+
+
+/* Search container */
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00FF00;
+    z-index: 10;
+    color: #00FF00;
+}
+
+/* Input field styling */
+#search-input {
+    background: transparent;
+    border: none;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    padding: 5px;
+    outline: none;
+    width: 200px; /* Adjust width as needed */
+}
+
+/* Search button styling */
+.search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 5px; /* Space between input and button */
+}
+
+.search-icon {
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+}
+
+/* Suggestions container */
+.suggestions {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 1px solid #00FF00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #00FF00;
+    width: 470px; /* Adjust width as needed */
+    max-height: 300px; /* Adjust height as needed */
+    overflow-y: auto;
+    z-index: 11;
+    display: none;
+}
+
+/* Individual suggestion item */
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #00FF00;
+    text-shadow: 0 0 5px #00FF00;
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-item:hover {
+    background-color: darkgreen;
+}
+
+/* Song image styling in suggestions */
+.suggestion-item img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 5px;
+    object-fit: cover; /* Ensure image covers without distortion */
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Highlight matching text */
+.highlight {
+    color: #00FF00; /* Hacker green color */
+    font-weight: bold;
 }

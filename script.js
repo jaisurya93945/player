@@ -146,13 +146,7 @@ function playAll() {
 
 setInterval(updateProgressBar, 1000);
 
-
-
-
-
-
-
-//search engine
+// Search engine
 
 // Sample playlist data
 var playlist = [
@@ -208,7 +202,7 @@ var playlist = [
         title: 'Dekha Hazaron Dafa',
         movie: 'Rustom',
         audio: 'audio/dekha.mp3',
-    image: 'https://c.saavncdn.com/221/Rustom-Hindi-2018-20191029174008-500x500.jpg'
+        image: 'https://c.saavncdn.com/221/Rustom-Hindi-2018-20191029174008-500x500.jpg'
     },
     {
         title: 'Kahani suno 2.0',
@@ -227,10 +221,8 @@ var playlist = [
         movie: "Local Train",
         audio: "https://pagalfree.com/download/320-Choo%20Lo%20-%20Aalas%20Ka%20Pedh%20320%20Kbps.mp3",
         image: "https://i1.sndcdn.com/artworks-u8xI3kXVRY7lo6TC-P0AKiw-t500x500.jpg"
-    },
-
+    }
 ];
-
 
 function searchSongs() {
     var query = document.getElementById('search-input').value.toLowerCase();
@@ -263,7 +255,7 @@ function searchSongs() {
         var suggestionsContainer = document.getElementById('suggestions');
         suggestionsContainer.innerHTML = '';
         suggestionsContainer.style.display = 'block';
-        
+
         suggestions.forEach(function(suggestion) {
             var suggestionItem = document.createElement('div');
             suggestionItem.className = 'suggestion-item';
@@ -293,15 +285,6 @@ function highlightText(text, query) {
 
 // Optionally, trigger search on input change for smoother experience
 document.getElementById('search-input').addEventListener('input', searchSongs);
-
-
-
-
-
-
-
-
-// hide suggestionbar on touching anywhere :)
 
 document.addEventListener('click', function(event) {
     var searchInput = document.getElementById('search-input');

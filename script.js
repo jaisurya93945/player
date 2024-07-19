@@ -222,6 +222,12 @@ var playlist = [
         audio: 'https://www.pagalworld.com.sb/files/download/type/320/id/68446',
         image: 'https://c.saavncdn.com/413/Marham-Pehle-Bhi-Main-From-ANIMAL-Hindi-2023-20231223151003-500x500.jpg'
     },
+    {
+        title: "Choo lo",
+        movie: "Local Train",
+        audio: "https://pagalfree.com/download/320-Choo%20Lo%20-%20Aalas%20Ka%20Pedh%20320%20Kbps.mp3",
+        image: "https://i1.sndcdn.com/artworks-u8xI3kXVRY7lo6TC-P0AKiw-t500x500.jpg"
+    },
 
 ];
 
@@ -287,3 +293,21 @@ function highlightText(text, query) {
 
 // Optionally, trigger search on input change for smoother experience
 document.getElementById('search-input').addEventListener('input', searchSongs);
+
+
+
+
+
+
+
+
+// hide suggestionbar on touching anywhere :)
+
+document.addEventListener('click', function(event) {
+    var searchInput = document.getElementById('search-input');
+    var suggestionsContainer = document.getElementById('suggestions');
+
+    if (!searchInput.contains(event.target) && !suggestionsContainer.contains(event.target)) {
+        suggestionsContainer.style.display = 'none';
+    }
+});

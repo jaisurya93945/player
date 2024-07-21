@@ -221,7 +221,20 @@ var playlist = [
         movie: "Local Train",
         audio: "https://pagalfree.com/download/320-Choo%20Lo%20-%20Aalas%20Ka%20Pedh%20320%20Kbps.mp3",
         image: "https://i1.sndcdn.com/artworks-u8xI3kXVRY7lo6TC-P0AKiw-t500x500.jpg"
-    }
+    },
+    {
+        title: 'Enna sona',
+        movie: 'Ok jaanu',
+        audio: 'https://pagalnew.com/download320/3328',
+        image: 'https://i.scdn.co/image/ab67616d0000b273ca99ff80246fc0fb4d670126'
+    },
+    {
+        title: "Chenna mereya",
+        movie: "Rock star",
+        audio: "https://pagalnew.com/download320/4099",
+        image: "https://c.saavncdn.com/197/Channa-Mereya-Remix-By-DJ-Chetas-From-Ae-Dil-Hai-Mushkil-Hindi-2016-500x500.jpg"
+    },
+
 ];
 
 function searchSongs() {

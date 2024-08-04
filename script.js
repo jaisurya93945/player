@@ -21,11 +21,13 @@ function togglePlay(button) {
 
     if (audio !== currentAudio && currentAudio !== null) {
         currentAudio.pause(); // Pause currently playing audio
+        currentAudio.currentTime = 0; // Reset current time to the beginning
         var currentButton = currentAudio.nextElementSibling;
         currentButton.innerHTML = '<img src="play.png" alt="Play Button">'; // Change previous button back to play
     }
 
     if (audio.paused) {
+        audio.currentTime = 0; // Start from the beginning
         audio.play();
         button.innerHTML = '<img src="pause.png" alt="Pause Button">'; // Pause button when playing
         currentAudio = audio;
@@ -58,6 +60,7 @@ function togglePlay(button) {
         displayedButton.innerHTML = '<img src="play.png" alt="Play Button">';
     }
 }
+
 
 function toggleLoop() {
     isLooping = !isLooping;
@@ -233,6 +236,24 @@ var playlist = [
         movie: "Rock star",
         audio: "https://pagalnew.com/download320/4099",
         image: "https://c.saavncdn.com/197/Channa-Mereya-Remix-By-DJ-Chetas-From-Ae-Dil-Hai-Mushkil-Hindi-2016-500x500.jpg"
+    },
+    {
+        title: 'Bhula Dena',
+        movie: 'Aashiqui2',
+        audio: 'https://pagalfree.com/download/320-Bhula%20Dena%20-%20Aashiqui%202%20320%20Kbps.mp3',
+        image: 'https://i.redd.it/jn6a63u2ibs91.gif'
+    },
+    {
+        title: 'Hum Maarjayenge',
+        movie: 'Aashiqui2',
+        audio: 'https://pagalfree.com/download/320-Hum%20Mar%20Jayenge%20-%20Aashiqui%202%20320%20Kbps.mp3',
+        image: 'https://media.tenor.com/d4r8iyiF5mAAAAAM/aditya-roy-kapur-shraddha-kapoor.gif'
+    },
+    {
+        title: 'Chitti',
+        movie: 'Jathi rathnalu',
+        audio: 'https://mp3teluguwap.net/mp3/2021/Jathi%20Ratnalu/Chitti%20-%20SenSongsMp3.Com.mp3',
+        image: 'https://c-fa.cdn.smule.com/rs-s-sf-4/arr/73/18/3f6d6a6a-6b53-419d-9ab0-fa4b26bbe9ee_1024.jpg'
     },
 
 ];

@@ -100,10 +100,37 @@ function pause() {
 }
 
 function playRandom() {
-    var randomIndex = Math.floor(Math.random() * currentPlaylist.length);
-    var randomButton = currentPlaylist[randomIndex].button;
-    togglePlay(randomButton);
+    // Pick a random song from the current playlist
+    const randomIndex = Math.floor(Math.random() * currentPlaylist.length);
+    const randomItem = currentPlaylist[randomIndex];
+    const randomAudio = randomItem.audio;
+    const randomButton = randomItem.button;
+
+    // Stop currently playing audio if there is any
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        const currentButton = currentAudio.nextElementSibling;
+        currentButton.innerHTML = '<img src="play.png" alt="Play Button">'; // Reset button
+    }
+
+    // Play the random song
+    randomAudio.currentTime = 0; // Start from the beginning
+    randomAudio.play();
+    randomButton.innerHTML = '<img src="pause.png" alt="Pause Button">'; // Update button
+
+    // Update the currentAudio reference
+    currentAudio = randomAudio;
+
+    // Update music player bar
+    document.querySelector('.music-player-bar .song-title').innerText = randomItem.title;
+    document.querySelector('.music-player-bar .movie-name').innerText = randomItem.movie;
+    document.querySelector('.music-player-bar .song-img-small').src = randomItem.image;
+
+    // Automatically play the next random song when the current song ends
+    randomAudio.addEventListener('ended', playRandom);
 }
+
 
 function updateProgressBar() {
     if (currentAudio) {

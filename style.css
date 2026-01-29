@@ -32,7 +32,6 @@ body {
     text-align: center;
     margin-top: 20px; /* Adjust as needed */
     z-index: 1; /* Ensure music player content is above the background */
-    padding-bottom: 120px;
 }
 
 h1 {

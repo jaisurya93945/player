@@ -255,7 +255,7 @@ var playlist = [
     {
         title: 'Enna sona',
         movie: 'Ok jaanu',
-        audio: 'https://pagalnew.com/download320/3328',
+        audio: 'https://koshalworld.com/files/download/id/20001',
         image: 'https://i.scdn.co/image/ab67616d0000b273ca99ff80246fc0fb4d670126'
     },
     {

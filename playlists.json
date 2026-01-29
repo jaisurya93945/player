@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Love Songs",
+    "image": "img/love.jpg",
+    "songs": ["tumhiho.mp3", "pbtc.mp3", "cmna.mp3"]
+  },
+  {
+    "name": "Sad Songs",
+    "image": "img/sad.jpg",
+    "songs": ["nadaniya.mp3", "kahani.mp3"]
+  }
+]

@@ -355,3 +355,43 @@ document.addEventListener('click', function(event) {
         suggestionsContainer.style.display = 'none';
     }
 });
+
+/* =========================
+   🔥 PLAYLIST FEATURE
+   ========================= */
+
+async function loadPlaylists() {
+    const res = await fetch("playlists.json");
+    const playlists = await res.json();
+
+    const listDiv = document.getElementById("playlistList");
+
+    playlists.forEach(pl => {
+        const card = document.createElement("div");
+        card.className = "playlist-card";
+
+        card.innerHTML = `
+            <img src="${pl.image}">
+            <p>${pl.name}</p>
+        `;
+
+        card.onclick = () => filterPlaylist(pl.songs);
+
+        listDiv.appendChild(card);
+    });
+}
+
+function filterPlaylist(songFiles) {
+    const allSongs = document.querySelectorAll(".song");
+
+    allSongs.forEach(song => {
+        const audioSrc = song.querySelector("audio").src;
+
+        const show = songFiles.some(file => audioSrc.includes(file));
+
+        song.style.display = show ? "flex" : "none";
+    });
+}
+
+/* load playlists when page loads */
+window.addEventListener("DOMContentLoaded", loadPlaylists);

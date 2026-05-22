@@ -207,7 +207,7 @@ var playlist = [
     {
         title: 'Husn',
         movie: 'Anuv Jain',
-        audio: 'https://www.pagalworld.com.sb/files/download/type/320/id/68768',
+        audio: 'https://workdeadlinededicate.com/ff3ixk7km?qwdxd=13&refer=https%3A%2F%2Fpagalnew.com%2Fsongs%2Fhusn-vk1-anuv-jain.html&kw=%5B%22husn%22%2C%22mp3%22%2C%22song%22%2C%22-%22%2C%22anuv%22%2C%22jain%22%2C%222023%22%2C%22songs%22%2C%22free%22%2C%22download%22%5D&key=23313e1bff2fcc4f93a88478c900eb4a&scrWidth=1080&scrHeight=675&tz=5.5&ship=1&v=2026.5.0&sub3=invoke_layer&res=14.31&dev=r&ifid=019e4f6d-a65a-7e18-b10a-77b3e39530c7&ibid=019e4f6d-a57f-7b60-afce-7cd710ca28cb&uuid=b2d29dfc-0bba-4811-850e-4bffa53dad1c%3A2%3A1',
         image: 'https://c.saavncdn.com/436/Husn-Hindi-2023-20231129054140-500x500.jpg'
     },
     {

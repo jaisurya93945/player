@@ -11,11 +11,11 @@
     "audio": "audio/pbtc.mp3",
     "cover": "img/hgf.jpg"
   },
-  {
-    "title": "Chahun Mein Ya Na",
-    "artist": "Aashiqui 2",
-    "audio": "audio/cmna.mp3",
-    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/chahun_mein_ya_na.jpeg"
+   {
+    "title": "Enna Sona",
+    "artist": "Ok Jaanu",
+    "audio": "https://koshalworld.com/files/download/id/20001",
+    "cover": "img/jan.gif"
   },
   {
     "title": "Nadaniya",
@@ -72,11 +72,12 @@
     "cover": "https://i1.sndcdn.com/artworks-u8xI3kXVRY7lo6TC-P0AKiw-t500x500.jpg"
   },
   {
-    "title": "Enna Sona",
-    "artist": "Ok Jaanu",
-    "audio": "https://koshalworld.com/files/download/id/20001",
-    "cover": "img/jan.gif"
+    "title": "Chahun Mein Ya Na",
+    "artist": "Aashiqui 2",
+    "audio": "audio/cmna.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/chahun_mein_ya_na.jpeg"
   },
+  
   {
     "title": "Channa Mereya",
     "artist": "Ae Dil Hai Mushkil",

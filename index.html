@@ -1,227 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacker Playlist</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/favi.png" type="image/png"> <!-- Add favicon -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Heart Hacking Playlist – a hacker's music player">
+  <title>Hacker Playlist</title>
+  <link rel="preconnect" href="https://c.saavncdn.com">
+  <link rel="preconnect" href="https://rukminim2.flixcart.com">
+  <link rel="preconnect" href="https://i1.sndcdn.com">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/favi.png" type="image/png">
 </head>
 <body>
-    <div class="matrix-background"></div>
-    
-                                                          <!--search engine--->
-    <div class="search-container">
-        <input type="text" id="search-input" placeholder="Search songs...">
-        <button onclick="searchSongs()" class="search-button">
-        <img src="img/search.png" alt="Search" class="search-icon">
+
+  <!-- Matrix rain canvas (replaces bg.gif) -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Search -->
+  <div class="search-container" role="search">
+    <input type="text" id="search-input" placeholder="Search songs..." autocomplete="off" spellcheck="false" aria-label="Search songs">
+    <button class="search-button" id="search-btn" aria-label="Search">
+      <img src="img/search.png" alt="" class="search-icon" width="24" height="24">
+    </button>
+    <div id="suggestions" class="suggestions" role="listbox" aria-label="Search suggestions"></div>
+  </div>
+
+  <!-- Main player -->
+  <div class="music-player">
+    <h1>Heart Hacking Playlist</h1>
+    <h2>Songs that can exploit my heart...</h2>
+    <div id="playlist" class="playlist" role="list" aria-label="Song list">
+      <!-- Dynamically rendered by script.js -->
+    </div>
+  </div>
+
+  <!-- Now Playing overlay – the premium "greeting card" -->
+  <div id="now-playing-overlay" class="now-playing-overlay" role="dialog" aria-modal="true" aria-label="Now Playing" aria-hidden="true">
+    <div class="np-backdrop" id="np-backdrop"></div>
+    <div class="now-playing-card" id="np-card">
+
+      <button class="np-close" id="np-close" aria-label="Close now playing">&#10005;</button>
+
+      <!-- Album art -->
+      <div class="np-art-wrap">
+        <div class="np-art-ring"></div>
+        <img id="np-cover" class="np-cover" src="" alt="Album art" loading="lazy">
+      </div>
+
+      <!-- Song info -->
+      <div class="np-info">
+        <p class="np-title" id="np-title">-</p>
+        <p class="np-artist" id="np-artist">-</p>
+      </div>
+
+      <!-- Progress -->
+      <div class="np-progress-wrap">
+        <div class="np-progress-track" id="np-progress-track" role="slider" aria-label="Song progress" tabindex="0">
+          <div class="np-progress-fill" id="np-progress-fill"></div>
+          <div class="np-progress-thumb" id="np-progress-thumb"></div>
+        </div>
+        <div class="np-times">
+          <span id="np-current">0:00</span>
+          <span id="np-total">0:00</span>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="np-controls">
+        <button class="np-btn" id="np-loop" title="Loop" aria-label="Toggle loop" aria-pressed="false">
+          <img src="img/arrow.png" alt="Loop" width="28" height="28">
         </button>
-        <div id="suggestions" class="suggestions"></div>
+        <button class="np-btn" id="np-prev" aria-label="Previous song">
+          <img src="img/previous.png" alt="Previous" width="28" height="28">
+        </button>
+        <button class="np-btn np-playpause-btn" id="np-playpause" aria-label="Play/Pause">
+          <img id="np-playpause-img" src="img/play1.png" alt="Play" width="36" height="36">
+        </button>
+        <button class="np-btn" id="np-next" aria-label="Next song">
+          <img src="img/next.png" alt="Next" width="28" height="28">
+        </button>
+        <button class="np-btn" id="np-shuffle" title="Shuffle" aria-label="Toggle shuffle" aria-pressed="false">
+          <img src="img/shuffle.png" alt="Shuffle" width="28" height="28">
+        </button>
+      </div>
+
+      <!-- Volume -->
+      <div class="np-volume-wrap">
+        <span class="np-vol-label" aria-hidden="true">&#128266;</span>
+        <input type="range" id="np-volume" class="np-volume-slider" min="0" max="100" value="100" aria-label="Volume">
+        <span class="np-vol-label" aria-hidden="true">&#128266;</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom mini-bar -->
+  <div class="music-player-bar" id="player-bar" aria-label="Mini player">
+    <div class="bar-left" id="bar-info-area">
+      <img src="" alt="Now playing" class="song-img-small" id="bar-cover">
+      <div class="song-info">
+        <p class="song-title" id="bar-title">-</p>
+        <p class="movie-name" id="bar-artist">-</p>
+      </div>
     </div>
 
-    
-    <div class="music-player">
-        <h1>Heart Hacking Playlist</h1>
-        <h2>Songs that can exploit my heart...</h2>
-        <!-- 🔥 Playlist selector -->
-        <div class="playlist">
-                                                      <!----song1 tum hi ho----->
-            <div class="song">
-                <img src="https://rukminim2.flixcart.com/image/850/1000/kxtaxzk0/poster/m/b/4/medium-aashiqui-2-hindi-movie-shraddha-kapoor-matte-finish-original-imaga6jknxddxbg2.jpeg?q=90&crop=false" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Tumhi ho</p>
-                <p class="movie-name">Aashiqui2</p>
-                <audio src="audio/tumhiho.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                      <!-----song2 phir bhi tumko chahunga----->
-            <div class="song">
-                <img src="img/hgf.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Phir bhi tumko Chahunga</p>
-                <p class="movie-name">Half Girlfriend</p>
-                <audio src="audio/pbtc.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                       <!-----song3 enna sona----->
-            <div class="song">
-                <img src="img/jan.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Enna sona</p>
-                <p class="movie-name">Ok jaanu</p>
-                <audio src="https://koshalworld.com/files/download/id/20001"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                       <!-----song4 nadaniya----->            
-            <div class="song">
-                <img src="img/nadaniya.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Nadaniya</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="audio/nadaniya.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                        <!-----song5 husn-----> 
-            <div class="song">
-                <img src="https://c.saavncdn.com/436/Husn-Hindi-2023-20231129054140-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Husn</p>
-                <p class="movie-name">Anuv Jain</p>
-                <audio src="audio/husn.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song6 ye tune kya kiya----->
-            <div class="song">
-                <img src="https://c.saavncdn.com/243/Once-Upon-A-Time-In-Mumbaai-Dobara-2013-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Ye tune kya kia</p>
-                <p class="movie-name">oup mumbai</p>
-                <audio src="audio/tune_kya_kiya.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song7 dagabaaz re----->
-            <div class="song">
-                <img src="https://a10.gaanacdn.com/gn_img/albums/XzVWRyL3dq/zVWRz0yWdq/size_m.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Dagabaaz re</p>
-                <p class="movie-name">Dabaang 2</p>
-                <audio src="audio/dagabaaz_re.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                       <!-----song8 chahun mein ya na----->
-            <div class="song">
-                <img src="https://rukminim2.flixcart.com/image/850/1000/ktrk13k0/music/9/b/k/audio-cd-standard-edition-t-series-aashiqui-2-original-imag7ffxjguujm23.jpeg?q=90&crop=false" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Chahun mein ya na</p>
-                <p class="movie-name">Aashiqui2</p>
-                <audio src="audio/cmna.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song9 Dekha hazaron----->
-            <div class="song">
-                <img src="https://c.saavncdn.com/221/Rustom-Hindi-2018-20191029174008-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Dekha Hazaron Dafa</p>
-                <p class="movie-name">Rustom</p>
-                <audio src="audio/dekha.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                       <!-----song10 Bhula dena----->
-            <div class="song">
-                <img src="https://i.redd.it/jn6a63u2ibs91.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Bhula Dena</p>
-                <p class="movie-name">Aashiqui2</p>
-                <audio src="audio/Bhula_Dena.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-
-                                                         <!-----song11 Pehle bhi main----->            
-            <div class="song">
-                <img src="https://c.saavncdn.com/413/Marham-Pehle-Bhi-Main-From-ANIMAL-Hindi-2023-20231223151003-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Pehle bhi mein</p>
-                <p class="movie-name">Animal</p>
-                <audio src="audio/Pehle_Bhi_Main.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song12 Choo lo----->  
-            <div class="song">
-                <img src="https://i1.sndcdn.com/artworks-u8xI3kXVRY7lo6TC-P0AKiw-t500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Choo lo</p>
-                <p class="movie-name">Local Train</p>
-                <audio src="audio/Choo_Lo.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song13 Chenna mereya----->  
-            <div class="song">
-                <img src="https://c.saavncdn.com/197/Channa-Mereya-Remix-By-DJ-Chetas-From-Ae-Dil-Hai-Mushkil-Hindi-2016-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Chenna mereya</p>
-                <p class="movie-name">Rock star</p>
-                <audio src="audio/Channa_Mereya.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song14 main-rahoon-ya-rahoon----->         
-            <div class="song">
-                <img src="https://c.saavncdn.com/395/Main-Rahoon-Ya-Na-Rahoon-Hindi-2015-500x500.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Main Rahoon</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="https://pagalworlld.com/files/download/id/3596"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song15 kahani suno----->
-            <div class="song">
-                <img src="https://source.boomplaymusic.com/group10/M00/02/15/b21e296a7ed74970a4d7b446f03e2eb1_464_464.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Kahani suno 2.0</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="audio/kahani.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song16 Hum Marjaenge----->
-            <div class="song">
-                <img src="https://media.tenor.com/d4r8iyiF5mAAAAAM/aditya-roy-kapur-shraddha-kapoor.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Hum Maarjayenge</p>
-                <p class="movie-name">Aashiqui2</p>
-                <audio src="audio/hum_mar_jayenge.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song17 Chitti----->
-            <div class="song">
-                <img src="https://c-fa.cdn.smule.com/rs-s-sf-4/arr/73/18/3f6d6a6a-6b53-419d-9ab0-fa4b26bbe9ee_1024.jpg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Chitti</p>
-                <p class="movie-name">Jathi rathnalu</p>
-                <audio src="https://mp3teluguwap.net/mp3/2021/Jathi%20Ratnalu/Chitti%20-%20SenSongsMp3.Com.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song17 Oorum blood----->
-            <div class="song">
-                <img src="img/dudd.jpeg" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Kahani suno 2.0</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="audio/Oorum_Blood.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song15 kahani suno----->
-            <div class="song">
-                <img src="https://media.tenor.com/gKDnbJONab4AAAAM/aashiqui-2-shraddha-kapoor.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Kahani suno 2.0</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="audio/kahani.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                         <!-----song15 kahani suno----->
-            <div class="song">
-                <img src="https://3.bp.blogspot.com/-sFnFQPPjc5A/Vm6ooewsxCI/AAAAAAAAAIQ/JKCbGw8zpe8/s1600/2ff6b4b1-c268-4c22-a336-902558fb55b8_tumblr_ms8o8xh5dl1sqeweeo1_250.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Kahani suno 2.0</p>
-                <p class="movie-name">Youtube</p>
-                <audio src="audio/kahani.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-                                                       <!-----song10 chahun mein ya na----->
-            <div class="song">
-                <img src="https://i.gifer.com/YLb7.gif" alt="Song 1 Image" class="song-img">
-                <p class="song-title">Chahun mein ya na</p>
-                <p class="movie-name">Aashiqui2</p>
-                <audio src="audio/cmna.mp3"></audio>
-                <button class="play-button" onclick="togglePlay(this)"><img src="play.png" alt="Play Button"></button>
-            </div>
-
-            
-            <!-- Add more songs as needed -->
-        </div>
+    <div class="progress-container" id="bar-progress-container" role="slider" aria-label="Song progress">
+      <div class="progress-bar" id="bar-progress-bar"></div>
     </div>
 
-    <div class="music-player-bar">
-        <img src="" alt="Song Image" class="song-img-small">
-        <div class="song-info">
-            <p class="song-title">-</p>
-            <p class="movie-name">-</p>
-        </div>
-        <div class="progress-container" onclick="seek(event)">
-            <div class="progress-bar"></div>
-        </div>
-        <div class="time-display">
-            <span class="current-time">0:00</span> / <span class="total-time">0:00</span>
-        </div>
-        <div class="controls">
-            <button class="control-button loop-button" onclick="toggleLoop()"><img src="img/arrow.png" height="25" width="25"></img></button>
-            <button class="control-button" onclick="playPrevious()"><img src="img/previous.png" height="25" width="25"></button>
-            <button class="control-button play" onclick="play()"><img src="img/play1.png" height="25" width="25"></button>
-            <button class="control-button pause" onclick="pause()"><img src="img/pause1.png" height="25" width="25"></button>
-            <button class="control-button" onclick="playNext()"><img src="img/next.png" height="25" width="25"></button>
-            <button class="control-button" onclick="playRandom()"><img src="img/shuffle.png" height="25" width="25"></button>
-            <button class="control-button" onclick="playAll()"><img src="img/all.png" height="25" width="25"></button>
-        </div>
+    <div class="time-display">
+      <span class="current-time" id="bar-current">0:00</span> /
+      <span class="total-time" id="bar-total">0:00</span>
     </div>
-    <script src="script.js"></script>
+
+    <div class="controls">
+      <button class="control-button" id="bar-loop" aria-label="Toggle loop" title="Loop">
+        <img src="img/arrow.png" height="22" width="22" alt="Loop">
+      </button>
+      <button class="control-button" id="bar-prev" aria-label="Previous song">
+        <img src="img/previous.png" height="22" width="22" alt="Previous">
+      </button>
+      <button class="control-button" id="bar-playpause" aria-label="Play/Pause">
+        <img src="img/play1.png" height="22" width="22" alt="Play" id="bar-playpause-img">
+      </button>
+      <button class="control-button" id="bar-next" aria-label="Next song">
+        <img src="img/next.png" height="22" width="22" alt="Next">
+      </button>
+      <button class="control-button" id="bar-shuffle" aria-label="Toggle shuffle" title="Shuffle">
+        <img src="img/shuffle.png" height="22" width="22" alt="Shuffle">
+      </button>
+    </div>
+
+    <button class="bar-expand-btn" id="bar-expand" aria-label="Open now playing view">&#9650;</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

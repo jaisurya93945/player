@@ -154,5 +154,11 @@
     "artist": "Krishna gadi veera prema gaadha",
     "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/nuvvante%20na%20navvu.mp3",
     "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/download%20(1).jpeg"
+  },
+  {
+    "title": "Meine Royan",
+    "artist": "Youtube",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/meine.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/Maine-Royaan-Tanveer-Evan-500-500.jpg"
   }
 ]

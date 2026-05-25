@@ -142,5 +142,17 @@
     "artist": "Vada chennai",
     "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/ennadimayavi.mp3",
     "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/ch.webp"
+  },
+  {
+    "title": "Aa seetha devaina",
+    "artist": "Krishna gadi veera prema gaadha",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/seetha.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/download%20(2).jpeg"
+  },
+  {
+    "title": "Nuvvante na navvu",
+    "artist": "Krishna gadi veera prema gaadha",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/nuvvante%20na%20navvu.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/download%20(1).jpeg"
   }
 ]

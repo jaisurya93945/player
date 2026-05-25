@@ -38,7 +38,7 @@
     {
     "title": "Dagabaaz Re",
     "artist": "Dabangg 2",
-    "audio": "https://ghantalele.com/uploads/files/data-10/4647/Dagabaaz%20Re_320(Ghantalele.com).mp3",
+    "audio": "audio/dagabaaz_re.mp3",
     "cover": "https://a10.gaanacdn.com/gn_img/albums/XzVWRyL3dq/zVWRz0yWdq/size_m.jpg"
   },
   {
@@ -56,7 +56,7 @@
   {
     "title": "Bhula Dena",
     "artist": "Aashiqui 2",
-    "audio": "https://pagalfree.com/download/320-Bhula%20Dena%20-%20Aashiqui%202%20320%20Kbps.mp3",
+    "audio": "audio/Bhula_Dena.mp3",
     "cover": "https://i.redd.it/jn6a63u2ibs91.gif"
   },
   {
@@ -80,7 +80,7 @@
    {
     "title": "Main Rahoon Ya Na Rahoon",
     "artist": "Armaan Malik",
-    "audio": "https://pagalworlld.com/files/download/id/3596",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/meinrahoon.mp3",
     "cover": "https://c.saavncdn.com/395/Main-Rahoon-Ya-Na-Rahoon-Hindi-2015-500x500.jpg"
   },
   {
@@ -92,14 +92,20 @@
   {
     "title": "Hum Maarjayenge",
     "artist": "Aashiqui 2",
-    "audio": "https://pagalfree.com/download/320-Hum%20Mar%20Jayenge%20-%20Aashiqui%202%20320%20Kbps.mp3",
+    "audio": "audio/hum_mar_jayenge.mp3",
     "cover": "https://media.tenor.com/d4r8iyiF5mAAAAAM/aditya-roy-kapur-shraddha-kapoor.gif"
   },
+   {
+    "title": "Chitti",
+    "artist": "Jathi Ratnalu",
+    "audio": "https://mp3teluguwap.net/mp3/2021/Jathi%20Ratnalu/Chitti%20-%20SenSongsMp3.Com.mp3",
+    "cover": "https://c-fa.cdn.smule.com/rs-s-sf-4/arr/73/18/3f6d6a6a-6b53-419d-9ab0-fa4b26bbe9ee_1024.jpg"
+  },
   {
-    "title": "Kahani Suno 2.0",
-    "artist": "Kaifi Khalil",
-    "audio": "audio/kahani.mp3",
-    "cover": "https://c.saavncdn.com/805/Kahani-Suno-2-0-Urdu-2022-20230111045100-500x500.jpg"
+    "title": "Oorum Blood(unplugged)",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Oorum%20Blood%20Unplugged.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dude3.jpeg"
   },
   {
     "title": "Chahun mein ya na",

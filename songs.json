@@ -108,15 +108,33 @@
     "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dude3.jpeg"
   },
   {
-    "title": "Chahun mein ya na",
-    "artist": "Aashiqui 2",
-    "audio": "audio/cmna.mp3",
-    "cover": "https://media.tenor.com/d4r8iyiF5mAAAAAM/aditya-roy-kapur-shraddha-kapoor.gif"
+    "title": "Dude Metro-proposal",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Dude-Metro-Proposal-BGM.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dude2.jpeg"
   },
   {
-    "title": "Chitti",
-    "artist": "Jathi Ratnalu",
-    "audio": "https://mp3teluguwap.net/mp3/2021/Jathi%20Ratnalu/Chitti%20-%20SenSongsMp3.Com.mp3",
-    "cover": "https://c-fa.cdn.smule.com/rs-s-sf-4/arr/73/18/3f6d6a6a-6b53-419d-9ab0-fa4b26bbe9ee_1024.jpg"
+    "title": "Nee gundelona",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/nee_gundelo.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dude2.jpeg"
+  },
+   {
+    "title": "Oorum Blood",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Boom_Boom.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dude2.jpeg"
+  },
+   {
+    "title": "Kannukulla",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Kannukulla.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dudd.jpeg"
+  },
+  {
+    "title": "Kannukulla(Reprise)",
+    "artist": "Dude",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Kannukulla%20(Reprise).mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/dudd.jpeg"
   }
 ]

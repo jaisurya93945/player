@@ -162,15 +162,21 @@
     "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/Maine-Royaan-Tanveer-Evan-500-500.jpg"
   },
   {
-    "title": "Meine Royan1",
-    "artist": "Youtube",
-    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/meine.mp3",
-    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/Maine-Royaan-Tanveer-Evan-500-500.jpg"
+    "title": "Billie Jean",
+    "artist": "Michael Jackson(God)",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/bille-jean.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/billie-jean.jpg"
   },
   {
-    "title": "Meine Royan2",
-    "artist": "Youtube",
-    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/meine.mp3",
-    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/Maine-Royaan-Tanveer-Evan-500-500.jpg"
+    "title": "They Don't Care about us",
+    "artist": "Michael Jackson(God)",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Michael%20Jackson%20-%20They%20Don't%20Care%20About%20Us.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/billie-jean.jpg"
+  },
+  {
+    "title": "Thousand Years",
+    "artist": "Christina Perri",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Thousand-Years.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/download%20(3).jpeg"
   }
 ]

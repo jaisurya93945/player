@@ -178,5 +178,11 @@
     "artist": "Christina Perri",
     "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/Thousand-Years.mp3",
     "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/download%20(3).jpeg"
+  },
+  {
+    "title": "Thousand Years(Male)",
+    "artist": "James Arthur",
+    "audio": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/audio/James%20Arthur%20-%20A%20Thousand%20Years.mp3",
+    "cover": "https://ycpxdlltiihzxwrqavkp.supabase.co/storage/v1/object/public/songs/img/hqdefault.jpg"
   }
 ]
